@@ -1,0 +1,125 @@
+/*
+File: index.html
+GUI Assignment: Creating a multiplication table that uses jquery for validation form 
+Dan Nguyen, UMASS Lowell Computer Science, dan_nguyen@student.uml.edu
+created on 6/19/2022, finished on 6/20/2022
+Copyright (c) 2022 by Dan Nguyen 
+This is a website that uses javascript to create a table where a user can enter
+4 numbers(between -50 and 50) (2 ranges) and create a multiplication table
+*/
+
+/* this is used for the main page */
+.main{
+    background-color: rgb(184, 184, 184);
+    text-align: left;
+    max-width: 700px;
+    min-width: 600px;
+    height: auto;
+    border: 1px solid black;
+    padding: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+}
+/* I used this for background image of lightning mcqueen */
+body {
+    background-color: rgb(104, 157, 255);
+    background-image: url("../images/mqueen.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    padding: 20px;
+}
+
+/* This creates the footer with the wanted style */
+footer{
+    font-style: italic;
+    margin: auto;
+    text-align:center;
+    float: bottom;
+    margin-top: 10px;
+}
+#emessage {
+    text-align: left;
+}
+/* I made every other column white and i put it before the td.header so the header wouldnt turn white*/
+td:nth-child(odd){
+    background-color: white;
+}
+table{
+    border: 2px solid; 
+    padding: 5px; 
+    font-size: 10pt;
+    empty-cells: hide;
+    text-align: center;
+}
+
+/* this is how i made the first column and first row stay when scrolling through the table */
+td.header{
+   background-color: rgb(184, 184, 184);
+   left: 0;
+   top: 0;
+   position: sticky;
+}
+td{
+    text-align: center;
+    padding: 10px;
+    border: 1px solid;
+}
+
+/* This is the container that has a max width and max height so I can make it scrollable
+    I used overflow auto so the scrolls wouldnt be there when it was not needed 
+*/
+
+
+/* makes the error message have a left margin of 10 so it doesnt overlap with slider */
+#number1-error, #number2-error, #number3-error, #number4-error {
+    margin-left: 10px;
+
+}
+/* this is container for the original table */
+div.container {
+    overflow: scroll;
+    max-width: 500px;
+    max-height: 500px;
+    overflow: auto;
+    margin-top: 10px;
+
+}
+/* for default state  */
+.tab.ui-state-default{
+    background: red;
+    color: white;
+}
+/* for active tab */
+.tab.ui-state-active{
+    background: green;
+    color: black;
+}
+
+/* this is for the slider */
+.ui-slider-horizontal {
+    height: 10px;
+    width: 250px;
+    left: 10px;
+}
+.ui-slider .ui-slider-handle{
+    height: 15px;
+    width: 10px;
+    padding-top: 5px;
+}
+
+.inputslider{
+    display: inline-block;
+}
+
+#divtabs{ 
+    width: auto; 
+}
+
+#divtabs li .ui-icon-close{
+    float: left;
+    cursor: pointer;
+}
+
+.clear {
+    clear: both;
+}

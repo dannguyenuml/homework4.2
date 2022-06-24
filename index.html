@@ -1,0 +1,80 @@
+<!--
+File: index.html
+GUI Assignment: Creating a multiplication table that uses jquery for validation form 
+Dan Nguyen, UMASS Lowell Computer Science, dan_nguyen@student.uml.edu
+created on 6/19/2022, finished on 6/20/2022
+Copyright (c) 2022 by Dan Nguyen 
+This is a website that uses javascript to create a table where a user can enter
+4 numbers(between -50 and 50) (2 ranges) and create a multiplication table. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Multiplication Table</title>
+<!-- This is for the jquery css -->
+        <link type = "text/css" rel="stylesheet" href = "css/jquery-ui.min.css">
+        <link rel="stylesheet" href="css/styling.css">
+        <link rel="icon" href="https://www.uml.edu/resources/university-relations/logos/vertical/vertical_logo_B&W.png">
+    </head>
+    <body>
+      
+        <div class = "main">
+            <h2>Multiplication Table</h2>
+            <p>Please enter 4 numbers(between -50 and 50) down below, and then press "Submit" to create a Multiplication table. <br>
+               Number 1 will be the vertical minimum, Number 2 will be the vertical maximum, Number 3 will be the horizontal mimumum, and
+               Number 4 will be the horizontal maximum. 
+            </p>
+<!-- I created a form id with the name form with 4 number inputs with their corresponding text labels and a submit button -->            
+            <form id = "form">
+                <label for ="First number">First number: </label><br>
+                <input type ="text" id = "number1" name="number1" size = "15"> 
+                <div id = "sliderone" class = "inputslider"></div><br><br>
+
+                <label for ="Second number">Second number: </label><br>
+                <input type ="text" id = "number2" name="number2" size = "15"> 
+                <div id = "slidertwo" class = "inputslider"></div><br><br>      
+
+                <label for ="Third number">Third number: </label><br>
+                <input type ="text" id = "number3" name="number3" size = "15"> 
+                <div id = "sliderthree" class = "inputslider"></div><br><br>
+
+                <label for ="Fourth number">Fourth number: </label><br>
+                <input type ="text" id = "number4" name="number4" size = "15">
+                <div id = "sliderfour" class = "inputslider"></div><br><br>
+<!-- I made these two buttons with their corresponding functions -->
+                <input type = "submit" id = "submit" value = "save table">
+                <input type = "button" id = "deletetabs" value ="Delete all tabs">
+            </form>    
+
+
+<!-- this is used for a error message when number1 is greater than number2 
+    or number 3 is greater than number 4 
+-->
+            <div id = 'emessage'></div>
+        </div>
+
+<!-- Container used for the multiplication table -->
+        <div class = "container">
+            <div id = "table"></div>
+        </div>
+<!-- this is for the tabs -->
+        <div id = "divtabs">
+            <ul id = "uitabs"></ul>
+        </div>
+        <div class = "clear"></div>
+
+        <footer>
+            Copyright 2022 Dan Nguyen
+        </footer>
+     
+<!-- this is for jquery -->
+        <script src = "./javascript/jquery-3.1.1.js"> </script>
+<!-- this for jqueryslides and tabs-->
+        <script src= "./javascript/jquery-ui.min.js"></script>   
+<!-- this is for jquery validation -->        
+        <script src ="./javascript/jquery.validate.js"></script>
+<!-- This is my javascript file -->        
+        <script src ="./javascript/javascript4.2.js"></script> 
+    </body>
+</html>
